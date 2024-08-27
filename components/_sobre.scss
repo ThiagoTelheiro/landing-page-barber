@@ -1,0 +1,29 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 165px;
+
+
+    background-color: variaveis.$color-dark-blue-3;
+    padding: 48px 36px 48px 87px;
+
+    .sobre-text {
+        max-width: 582px;
+
+        h2 {
+            @include mixins.fs-fc-fw (44px, variaveis.$color-white, 700);
+            text-transform: uppercase;
+            margin-bottom: 21px;
+        }
+
+        p {
+            @include mixins.fs-fc-fw (18px, variaveis.$color-white, 500);
+            text-align: justify;
+        }
+
+    }
+}

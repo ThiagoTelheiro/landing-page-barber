@@ -1,0 +1,26 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 39px;
+    background-color: variaveis.$color-dark-blue-3;
+    padding: 58px 0 28px 0;
+
+    .icons {
+        display: flex;
+        gap: 14px;
+        
+        i {
+            color: white;
+        }
+    }
+
+    p {
+        @include mixins.fs-fc-fw (12px, variaveis.$color-white, 700);
+    }
+}
+
